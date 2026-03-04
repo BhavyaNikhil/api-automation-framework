@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "data",
+    "responseStatus"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": ["vehicleSystemStatus","customerType","vehicleStatus"],
+
+      "properties": {
+        "vehicleSystemStatus": {
+          "type": "object",
+          "required": [
+            "ignitionStatus",
+            "EVMCUGearStat",
+            "EVBMSHealthStatus",
+            "EVMCUVehicleParam",
+            "EVBMSSOH",
+            "location",
+            "pdid",
+            "EVBMSSOC",
+            "gpsOdometerKm",
+            "EVMCUInfo1",
+            "EVBMSPackCapacity",
+            "dongleConnectionStatus"
+          ],
+
+          "properties": {
+            "ignitionStatus": {
+              "type": "object",
+              "required": ["sts", "value"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "value": { "type": "boolean" }
+              }
+            },
+
+            "EVMCUGearStat": {
+              "type": "object",
+              "required": ["sts", "mgrst"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "mgrst": { "type": "string" }
+              }
+            },
+
+            "EVBMSHealthStatus": {
+              "type": "object",
+              "required": ["sts", "bdekm"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "bdekm": { "type": "string" }
+              }
+            },
+
+            "EVMCUVehicleParam": {
+              "type": "object",
+              "required": ["sts", "modo"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "modo": { "type": "string" }
+              }
+            },
+
+            "EVBMSSOH": {
+              "type": "object",
+              "required": ["sts", "bsoh"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "bsoh": { "type": "string" }
+              }
+            },
+
+            "location": {
+              "type": "object",
+              "required": [
+                "noLastKnownLocation",
+                "sts",
+                "latitude",
+                "lastKnownLocation",
+                "maxSpeed",
+                "speed",
+                "speedUpdatedTime",
+                "avgSpeed",
+                "longitude"
+              ],
+              "properties": {
+                "noLastKnownLocation": { "type": "boolean" },
+                "sts": { "type": "integer" },
+                "latitude": { "type": "number" },
+                "lastKnownLocation": { "type": "boolean" },
+                "maxSpeed": { "type": "number" },
+                "speed": { "type": "number" },
+                "speedUpdatedTime": { "type": "integer" },
+                "avgSpeed": { "type": "number" },
+                "longitude": { "type": "number" }
+              }
+            },
+
+            "pdid": { "type": "string" },
+
+            "EVBMSSOC": {
+              "type": "object",
+              "required": ["sts", "bsoc"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "bsoc": { "type": "string" }
+              }
+            },
+
+            "gpsOdometerKm": { "type": "number" },
+
+            "EVMCUInfo1": {
+              "type": "object",
+              "required": ["sts", "mmotp"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "mmotp": { "type": "string" }
+              }
+            },
+
+            "EVBMSPackCapacity": {
+              "type": "object",
+              "required": ["sts", "bbptp"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "bbptp": { "type": "string" }
+              }
+            },
+
+            "dongleConnectionStatus": {
+              "type": "object",
+              "required": ["sts", "dongleState"],
+              "properties": {
+                "sts": { "type": "integer" },
+                "dongleState": { "type": "string" }
+              }
+            }
+          }
+        },
+
+        "customerType": { "type": "string" },
+        "vehicleStatus": { "type": "string" }
+      }
+    },
+
+    "responseStatus": {
+      "type": "object",
+      "required": ["code", "serverTime", "message"],
+      "properties": {
+        "code": { "type": "integer" },
+        "serverTime": { "type": "integer" },
+        "message": { "type": "string" }
+      }
+    }
+  }
+}

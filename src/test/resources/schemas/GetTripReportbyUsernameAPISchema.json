@@ -1,0 +1,1535 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "elements": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "tripAnalysisDetails": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "tripAnalysis": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "summary": {
+                              "type": "object",
+                              "properties": {
+                                "routeDeviation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "deltaDistanceMetres": {
+                                      "type": "number"
+                                    },
+                                    "deviated": {
+                                      "type": "boolean"
+                                    }
+                                  },
+                                  "required": [
+                                    "deltaDistanceMetres",
+                                    "deviated"
+                                  ]
+                                },
+                                "shortEndAddress": {
+                                  "type": "string"
+                                },
+                                "totalHaltTimeSeconds": {
+                                  "type": "number"
+                                },
+                                "fuelMileage": {
+                                  "type": "object",
+                                  "properties": {
+                                    "mileageValueAcOff": {
+                                      "type": "number"
+                                    },
+                                    "mileageValueAcOn": {
+                                      "type": "number"
+                                    },
+                                    "distanceAcOn": {
+                                      "type": "number"
+                                    },
+                                    "distanceAcOff": {
+                                      "type": "number"
+                                    },
+                                    "consumptionAcOn": {
+                                      "type": "number"
+                                    },
+                                    "consumptionAcOff": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "mileageValueAcOff",
+                                    "mileageValueAcOn",
+                                    "distanceAcOn",
+                                    "distanceAcOff",
+                                    "consumptionAcOn",
+                                    "consumptionAcOff"
+                                  ]
+                                },
+                                "totalOdoMeterDistance": {
+                                  "type": "number"
+                                },
+                                "source": {
+                                  "type": "string"
+                                },
+                                "maxOdoSpeed": {
+                                  "type": "number"
+                                },
+                                "startLocation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "heading": {
+                                      "type": "number"
+                                    },
+                                    "latitude": {
+                                      "type": "number"
+                                    },
+                                    "accuracyPercent": {
+                                      "type": "number"
+                                    },
+                                    "speed": {
+                                      "type": "number"
+                                    },
+                                    "satelliteLatchCount": {
+                                      "type": "number"
+                                    },
+                                    "longitude": {
+                                      "type": "number"
+                                    },
+                                    "ts": {
+                                      "type": "integer"
+                                    },
+                                    "GPSSignalStrength": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "heading",
+                                    "latitude",
+                                    "accuracyPercent",
+                                    "speed",
+                                    "satelliteLatchCount",
+                                    "longitude",
+                                    "ts",
+                                    "GPSSignalStrength"
+                                  ]
+                                },
+                                "maxGPSSpeed": {
+                                  "type": "number"
+                                },
+                                "totalGPSDistanceMetresViaEVBattery": {
+                                  "type": "number"
+                                },
+                                "tripStartTimestamp": {
+                                  "type": "integer"
+                                },
+                                "endLocation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "heading": {
+                                      "type": "number"
+                                    },
+                                    "latitude": {
+                                      "type": "number"
+                                    },
+                                    "speed": {
+                                      "type": "number"
+                                    },
+                                    "longitude": {
+                                      "type": "number"
+                                    },
+                                    "ts": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "heading",
+                                    "latitude",
+                                    "speed",
+                                    "longitude",
+                                    "ts"
+                                  ]
+                                },
+                                "nightDrivingAlertGenerated": {
+                                  "type": "boolean"
+                                },
+                                "totalIdlingTimeSeconds": {
+                                  "type": "number"
+                                },
+                                "startAddress": {
+                                  "type": "string"
+                                },
+                                "evbatteryUtilizationTotalTimeSeconds": {
+                                  "type": "integer"
+                                },
+                                "tripEndTimestamp": {
+                                  "type": "integer"
+                                },
+                                "totalGPSDistanceMetres": {
+                                  "type": "number"
+                                },
+                                "totalRunningTimeMins": {
+                                  "type": "number"
+                                },
+                                "driverBehaviorSummary": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "noOfRapidDeceleration": {
+                                          "type": "integer"
+                                        },
+                                        "noOfSharpTurn": {
+                                          "type": "integer"
+                                        },
+                                        "noOfLaneChange": {
+                                          "type": "integer"
+                                        },
+                                        "rating": {
+                                          "type": "integer"
+                                        },
+                                        "noOfHarshBreak": {
+                                          "type": "integer"
+                                        },
+                                        "noOfRapidAcceleration": {
+                                          "type": "integer"
+                                        },
+                                        "noOfOverSpeed": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "noOfRapidDeceleration",
+                                        "noOfSharpTurn",
+                                        "noOfLaneChange",
+                                        "rating",
+                                        "noOfHarshBreak",
+                                        "noOfRapidAcceleration",
+                                        "noOfOverSpeed"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "avgInstMileage": {
+                                  "type": "number"
+                                },
+                                "avgGPSSpeed": {
+                                  "type": "number"
+                                },
+                                "shortStartAddress": {
+                                  "type": "string"
+                                },
+                                "avgOdoSpeed": {
+                                  "type": "number"
+                                },
+                                "endAddress": {
+                                  "type": "string"
+                                },
+                                "status": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "routeDeviation",
+                                "shortEndAddress",
+                                "totalHaltTimeSeconds",
+                                "fuelMileage",
+                                "totalOdoMeterDistance",
+                                "source",
+                                "maxOdoSpeed",
+                                "startLocation",
+                                "maxGPSSpeed",
+                                "totalGPSDistanceMetresViaEVBattery",
+                                "tripStartTimestamp",
+                                "endLocation",
+                                "nightDrivingAlertGenerated",
+                                "totalIdlingTimeSeconds",
+                                "startAddress",
+                                "evbatteryUtilizationTotalTimeSeconds",
+                                "tripEndTimestamp",
+                                "totalGPSDistanceMetres",
+                                "totalRunningTimeMins",
+                                "driverBehaviorSummary",
+                                "avgInstMileage",
+                                "avgGPSSpeed",
+                                "shortStartAddress",
+                                "avgOdoSpeed",
+                                "endAddress",
+                                "status"
+                              ]
+                            },
+                            "fcevUtilization": {
+                              "type": "number"
+                            },
+                            "lastTripRegenTimestamp": {
+                              "type": "integer"
+                            },
+                            "canAvgSpeed": {
+                              "type": "string"
+                            },
+                            "tripRegenCount": {
+                              "type": "integer"
+                            },
+                            "h2iceUtilization": {
+                              "type": "number"
+                            },
+                            "tripEfficiencyEnergyConsumed": {
+                              "type": "number"
+                            },
+                            "fcevDistanceTraveled": {
+                              "type": "integer"
+                            },
+                            "fcevEfficiency": {
+                              "type": "number"
+                            },
+                            "h2iceDistanceTravel": {
+                              "type": "integer"
+                            },
+                            "tripType": {
+                              "type": "string"
+                            },
+                            "h2iceTotalFuelConsumed": {
+                              "type": "integer"
+                            },
+                            "fcevTotalH2ConsumedInKG": {
+                              "type": "integer"
+                            },
+                            "halts": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "location": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "endTimestamp": {
+                                      "type": "integer"
+                                    },
+                                    "startTimestamp": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "location",
+                                    "endTimestamp",
+                                    "startTimestamp"
+                                  ]
+                                }
+                              ]
+                            },
+                            "h2iceEfficiency": {
+                              "type": "number"
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "pdId": {
+                              "type": "string"
+                            },
+                            "canMaxSpeed": {
+                              "type": "string"
+                            },
+                            "moving": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "startLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "distanceInMetres": {
+                                      "type": "number"
+                                    },
+                                    "endTimestamp": {
+                                      "type": "integer"
+                                    },
+                                    "endLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "startTimestamp": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "startLocation",
+                                    "distanceInMetres",
+                                    "endTimestamp",
+                                    "endLocation",
+                                    "startTimestamp"
+                                  ]
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "startLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "distanceInMetres": {
+                                      "type": "number"
+                                    },
+                                    "endTimestamp": {
+                                      "type": "integer"
+                                    },
+                                    "endLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "speed",
+                                        "longitude",
+                                        "ts"
+                                      ]
+                                    },
+                                    "startTimestamp": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "startLocation",
+                                    "distanceInMetres",
+                                    "endTimestamp",
+                                    "endLocation",
+                                    "startTimestamp"
+                                  ]
+                                }
+                              ]
+                            },
+                            "isTripRegerated": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "summary",
+                            "fcevUtilization",
+                            "lastTripRegenTimestamp",
+                            "canAvgSpeed",
+                            "tripRegenCount",
+                            "h2iceUtilization",
+                            "tripEfficiencyEnergyConsumed",
+                            "fcevDistanceTraveled",
+                            "fcevEfficiency",
+                            "h2iceDistanceTravel",
+                            "tripType",
+                            "h2iceTotalFuelConsumed",
+                            "fcevTotalH2ConsumedInKG",
+                            "halts",
+                            "h2iceEfficiency",
+                            "id",
+                            "pdId",
+                            "canMaxSpeed",
+                            "moving",
+                            "isTripRegerated"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "summary": {
+                              "type": "object",
+                              "properties": {
+                                "routeDeviation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "deltaDistanceMetres": {
+                                      "type": "number"
+                                    },
+                                    "deviated": {
+                                      "type": "boolean"
+                                    }
+                                  },
+                                  "required": [
+                                    "deltaDistanceMetres",
+                                    "deviated"
+                                  ]
+                                },
+                                "shortEndAddress": {
+                                  "type": "string"
+                                },
+                                "totalHaltTimeSeconds": {
+                                  "type": "number"
+                                },
+                                "fuelMileage": {
+                                  "type": "object",
+                                  "properties": {
+                                    "mileageValueAcOff": {
+                                      "type": "number"
+                                    },
+                                    "mileageValueAcOn": {
+                                      "type": "number"
+                                    },
+                                    "distanceAcOn": {
+                                      "type": "number"
+                                    },
+                                    "distanceAcOff": {
+                                      "type": "number"
+                                    },
+                                    "consumptionAcOn": {
+                                      "type": "number"
+                                    },
+                                    "consumptionAcOff": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "mileageValueAcOff",
+                                    "mileageValueAcOn",
+                                    "distanceAcOn",
+                                    "distanceAcOff",
+                                    "consumptionAcOn",
+                                    "consumptionAcOff"
+                                  ]
+                                },
+                                "totalOdoMeterDistance": {
+                                  "type": "number"
+                                },
+                                "source": {
+                                  "type": "string"
+                                },
+                                "maxOdoSpeed": {
+                                  "type": "number"
+                                },
+                                "startLocation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "heading": {
+                                      "type": "number"
+                                    },
+                                    "latitude": {
+                                      "type": "number"
+                                    },
+                                    "accuracyPercent": {
+                                      "type": "number"
+                                    },
+                                    "speed": {
+                                      "type": "number"
+                                    },
+                                    "satelliteLatchCount": {
+                                      "type": "number"
+                                    },
+                                    "longitude": {
+                                      "type": "number"
+                                    },
+                                    "ts": {
+                                      "type": "integer"
+                                    },
+                                    "GPSSignalStrength": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "heading",
+                                    "latitude",
+                                    "accuracyPercent",
+                                    "speed",
+                                    "satelliteLatchCount",
+                                    "longitude",
+                                    "ts",
+                                    "GPSSignalStrength"
+                                  ]
+                                },
+                                "maxGPSSpeed": {
+                                  "type": "number"
+                                },
+                                "totalGPSDistanceMetresViaEVBattery": {
+                                  "type": "number"
+                                },
+                                "tripStartTimestamp": {
+                                  "type": "integer"
+                                },
+                                "endLocation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "heading": {
+                                      "type": "number"
+                                    },
+                                    "latitude": {
+                                      "type": "number"
+                                    },
+                                    "accuracyPercent": {
+                                      "type": "number"
+                                    },
+                                    "speed": {
+                                      "type": "number"
+                                    },
+                                    "satelliteLatchCount": {
+                                      "type": "number"
+                                    },
+                                    "longitude": {
+                                      "type": "number"
+                                    },
+                                    "ts": {
+                                      "type": "integer"
+                                    },
+                                    "GPSSignalStrength": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "heading",
+                                    "latitude",
+                                    "accuracyPercent",
+                                    "speed",
+                                    "satelliteLatchCount",
+                                    "longitude",
+                                    "ts",
+                                    "GPSSignalStrength"
+                                  ]
+                                },
+                                "nightDrivingAlertGenerated": {
+                                  "type": "boolean"
+                                },
+                                "totalIdlingTimeSeconds": {
+                                  "type": "number"
+                                },
+                                "startAddress": {
+                                  "type": "string"
+                                },
+                                "evbatteryUtilizationTotalTimeSeconds": {
+                                  "type": "integer"
+                                },
+                                "tripEndTimestamp": {
+                                  "type": "integer"
+                                },
+                                "totalGPSDistanceMetres": {
+                                  "type": "number"
+                                },
+                                "totalRunningTimeMins": {
+                                  "type": "number"
+                                },
+                                "driverBehaviorSummary": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "noOfRapidDeceleration": {
+                                          "type": "integer"
+                                        },
+                                        "noOfSharpTurn": {
+                                          "type": "integer"
+                                        },
+                                        "noOfLaneChange": {
+                                          "type": "integer"
+                                        },
+                                        "rating": {
+                                          "type": "integer"
+                                        },
+                                        "noOfHarshBreak": {
+                                          "type": "integer"
+                                        },
+                                        "noOfRapidAcceleration": {
+                                          "type": "integer"
+                                        },
+                                        "noOfOverSpeed": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "noOfRapidDeceleration",
+                                        "noOfSharpTurn",
+                                        "noOfLaneChange",
+                                        "rating",
+                                        "noOfHarshBreak",
+                                        "noOfRapidAcceleration",
+                                        "noOfOverSpeed"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "avgInstMileage": {
+                                  "type": "number"
+                                },
+                                "avgGPSSpeed": {
+                                  "type": "number"
+                                },
+                                "shortStartAddress": {
+                                  "type": "string"
+                                },
+                                "avgOdoSpeed": {
+                                  "type": "number"
+                                },
+                                "endAddress": {
+                                  "type": "string"
+                                },
+                                "status": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "routeDeviation",
+                                "shortEndAddress",
+                                "totalHaltTimeSeconds",
+                                "fuelMileage",
+                                "totalOdoMeterDistance",
+                                "source",
+                                "maxOdoSpeed",
+                                "startLocation",
+                                "maxGPSSpeed",
+                                "totalGPSDistanceMetresViaEVBattery",
+                                "tripStartTimestamp",
+                                "endLocation",
+                                "nightDrivingAlertGenerated",
+                                "totalIdlingTimeSeconds",
+                                "startAddress",
+                                "evbatteryUtilizationTotalTimeSeconds",
+                                "tripEndTimestamp",
+                                "totalGPSDistanceMetres",
+                                "totalRunningTimeMins",
+                                "driverBehaviorSummary",
+                                "avgInstMileage",
+                                "avgGPSSpeed",
+                                "shortStartAddress",
+                                "avgOdoSpeed",
+                                "endAddress",
+                                "status"
+                              ]
+                            },
+                            "fcevUtilization": {
+                              "type": "number"
+                            },
+                            "lastTripRegenTimestamp": {
+                              "type": "integer"
+                            },
+                            "canAvgSpeed": {
+                              "type": "string"
+                            },
+                            "tripRegenCount": {
+                              "type": "integer"
+                            },
+                            "h2iceUtilization": {
+                              "type": "number"
+                            },
+                            "tripEfficiencyEnergyConsumed": {
+                              "type": "number"
+                            },
+                            "fcevDistanceTraveled": {
+                              "type": "integer"
+                            },
+                            "fcevEfficiency": {
+                              "type": "number"
+                            },
+                            "h2iceDistanceTravel": {
+                              "type": "integer"
+                            },
+                            "tripType": {
+                              "type": "string"
+                            },
+                            "h2iceTotalFuelConsumed": {
+                              "type": "integer"
+                            },
+                            "fcevTotalH2ConsumedInKG": {
+                              "type": "integer"
+                            },
+                            "h2iceEfficiency": {
+                              "type": "number"
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "pdId": {
+                              "type": "string"
+                            },
+                            "canMaxSpeed": {
+                              "type": "string"
+                            },
+                            "moving": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "startLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "distanceInMetres": {
+                                      "type": "number"
+                                    },
+                                    "endTimestamp": {
+                                      "type": "integer"
+                                    },
+                                    "endLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "startTimestamp": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "startLocation",
+                                    "distanceInMetres",
+                                    "endTimestamp",
+                                    "endLocation",
+                                    "startTimestamp"
+                                  ]
+                                }
+                              ]
+                            },
+                            "isTripRegerated": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "summary",
+                            "fcevUtilization",
+                            "lastTripRegenTimestamp",
+                            "canAvgSpeed",
+                            "tripRegenCount",
+                            "h2iceUtilization",
+                            "tripEfficiencyEnergyConsumed",
+                            "fcevDistanceTraveled",
+                            "fcevEfficiency",
+                            "h2iceDistanceTravel",
+                            "tripType",
+                            "h2iceTotalFuelConsumed",
+                            "fcevTotalH2ConsumedInKG",
+                            "h2iceEfficiency",
+                            "id",
+                            "pdId",
+                            "canMaxSpeed",
+                            "moving",
+                            "isTripRegerated"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "summary": {
+                              "type": "object",
+                              "properties": {
+                                "routeDeviation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "deltaDistanceMetres": {
+                                      "type": "number"
+                                    },
+                                    "deviated": {
+                                      "type": "boolean"
+                                    }
+                                  },
+                                  "required": [
+                                    "deltaDistanceMetres",
+                                    "deviated"
+                                  ]
+                                },
+                                "shortEndAddress": {
+                                  "type": "string"
+                                },
+                                "totalHaltTimeSeconds": {
+                                  "type": "number"
+                                },
+                                "fuelMileage": {
+                                  "type": "object",
+                                  "properties": {
+                                    "mileageValueAcOff": {
+                                      "type": "number"
+                                    },
+                                    "mileageValueAcOn": {
+                                      "type": "number"
+                                    },
+                                    "distanceAcOn": {
+                                      "type": "number"
+                                    },
+                                    "distanceAcOff": {
+                                      "type": "number"
+                                    },
+                                    "consumptionAcOn": {
+                                      "type": "number"
+                                    },
+                                    "consumptionAcOff": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "mileageValueAcOff",
+                                    "mileageValueAcOn",
+                                    "distanceAcOn",
+                                    "distanceAcOff",
+                                    "consumptionAcOn",
+                                    "consumptionAcOff"
+                                  ]
+                                },
+                                "totalOdoMeterDistance": {
+                                  "type": "number"
+                                },
+                                "source": {
+                                  "type": "string"
+                                },
+                                "maxOdoSpeed": {
+                                  "type": "number"
+                                },
+                                "startLocation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "heading": {
+                                      "type": "number"
+                                    },
+                                    "latitude": {
+                                      "type": "number"
+                                    },
+                                    "accuracyPercent": {
+                                      "type": "number"
+                                    },
+                                    "speed": {
+                                      "type": "number"
+                                    },
+                                    "satelliteLatchCount": {
+                                      "type": "number"
+                                    },
+                                    "longitude": {
+                                      "type": "number"
+                                    },
+                                    "ts": {
+                                      "type": "integer"
+                                    },
+                                    "GPSSignalStrength": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "heading",
+                                    "latitude",
+                                    "accuracyPercent",
+                                    "speed",
+                                    "satelliteLatchCount",
+                                    "longitude",
+                                    "ts",
+                                    "GPSSignalStrength"
+                                  ]
+                                },
+                                "maxGPSSpeed": {
+                                  "type": "number"
+                                },
+                                "totalGPSDistanceMetresViaEVBattery": {
+                                  "type": "number"
+                                },
+                                "tripStartTimestamp": {
+                                  "type": "integer"
+                                },
+                                "endLocation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "heading": {
+                                      "type": "number"
+                                    },
+                                    "latitude": {
+                                      "type": "number"
+                                    },
+                                    "accuracyPercent": {
+                                      "type": "number"
+                                    },
+                                    "speed": {
+                                      "type": "number"
+                                    },
+                                    "satelliteLatchCount": {
+                                      "type": "number"
+                                    },
+                                    "longitude": {
+                                      "type": "number"
+                                    },
+                                    "ts": {
+                                      "type": "integer"
+                                    },
+                                    "GPSSignalStrength": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "heading",
+                                    "latitude",
+                                    "accuracyPercent",
+                                    "speed",
+                                    "satelliteLatchCount",
+                                    "longitude",
+                                    "ts",
+                                    "GPSSignalStrength"
+                                  ]
+                                },
+                                "nightDrivingAlertGenerated": {
+                                  "type": "boolean"
+                                },
+                                "totalIdlingTimeSeconds": {
+                                  "type": "number"
+                                },
+                                "startAddress": {
+                                  "type": "string"
+                                },
+                                "evbatteryUtilizationTotalTimeSeconds": {
+                                  "type": "integer"
+                                },
+                                "tripEndTimestamp": {
+                                  "type": "integer"
+                                },
+                                "totalGPSDistanceMetres": {
+                                  "type": "number"
+                                },
+                                "totalRunningTimeMins": {
+                                  "type": "number"
+                                },
+                                "driverBehaviorSummary": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "noOfRapidDeceleration": {
+                                          "type": "integer"
+                                        },
+                                        "noOfSharpTurn": {
+                                          "type": "integer"
+                                        },
+                                        "noOfLaneChange": {
+                                          "type": "integer"
+                                        },
+                                        "rating": {
+                                          "type": "integer"
+                                        },
+                                        "noOfHarshBreak": {
+                                          "type": "integer"
+                                        },
+                                        "noOfRapidAcceleration": {
+                                          "type": "integer"
+                                        },
+                                        "noOfOverSpeed": {
+                                          "type": "integer"
+                                        }
+                                      },
+                                      "required": [
+                                        "noOfRapidDeceleration",
+                                        "noOfSharpTurn",
+                                        "noOfLaneChange",
+                                        "rating",
+                                        "noOfHarshBreak",
+                                        "noOfRapidAcceleration",
+                                        "noOfOverSpeed"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "avgInstMileage": {
+                                  "type": "number"
+                                },
+                                "avgGPSSpeed": {
+                                  "type": "number"
+                                },
+                                "shortStartAddress": {
+                                  "type": "string"
+                                },
+                                "avgOdoSpeed": {
+                                  "type": "number"
+                                },
+                                "endAddress": {
+                                  "type": "string"
+                                },
+                                "status": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "routeDeviation",
+                                "shortEndAddress",
+                                "totalHaltTimeSeconds",
+                                "fuelMileage",
+                                "totalOdoMeterDistance",
+                                "source",
+                                "maxOdoSpeed",
+                                "startLocation",
+                                "maxGPSSpeed",
+                                "totalGPSDistanceMetresViaEVBattery",
+                                "tripStartTimestamp",
+                                "endLocation",
+                                "nightDrivingAlertGenerated",
+                                "totalIdlingTimeSeconds",
+                                "startAddress",
+                                "evbatteryUtilizationTotalTimeSeconds",
+                                "tripEndTimestamp",
+                                "totalGPSDistanceMetres",
+                                "totalRunningTimeMins",
+                                "driverBehaviorSummary",
+                                "avgInstMileage",
+                                "avgGPSSpeed",
+                                "shortStartAddress",
+                                "avgOdoSpeed",
+                                "endAddress",
+                                "status"
+                              ]
+                            },
+                            "fcevUtilization": {
+                              "type": "number"
+                            },
+                            "lastTripRegenTimestamp": {
+                              "type": "integer"
+                            },
+                            "canAvgSpeed": {
+                              "type": "string"
+                            },
+                            "tripRegenCount": {
+                              "type": "integer"
+                            },
+                            "h2iceUtilization": {
+                              "type": "number"
+                            },
+                            "tripEfficiencyEnergyConsumed": {
+                              "type": "number"
+                            },
+                            "fcevDistanceTraveled": {
+                              "type": "integer"
+                            },
+                            "fcevEfficiency": {
+                              "type": "number"
+                            },
+                            "h2iceDistanceTravel": {
+                              "type": "integer"
+                            },
+                            "tripType": {
+                              "type": "string"
+                            },
+                            "h2iceTotalFuelConsumed": {
+                              "type": "integer"
+                            },
+                            "fcevTotalH2ConsumedInKG": {
+                              "type": "integer"
+                            },
+                            "h2iceEfficiency": {
+                              "type": "number"
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "pdId": {
+                              "type": "string"
+                            },
+                            "canMaxSpeed": {
+                              "type": "string"
+                            },
+                            "moving": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "startLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "distanceInMetres": {
+                                      "type": "number"
+                                    },
+                                    "endTimestamp": {
+                                      "type": "integer"
+                                    },
+                                    "endLocation": {
+                                      "type": "object",
+                                      "properties": {
+                                        "heading": {
+                                          "type": "number"
+                                        },
+                                        "latitude": {
+                                          "type": "number"
+                                        },
+                                        "accuracyPercent": {
+                                          "type": "number"
+                                        },
+                                        "speed": {
+                                          "type": "number"
+                                        },
+                                        "satelliteLatchCount": {
+                                          "type": "number"
+                                        },
+                                        "longitude": {
+                                          "type": "number"
+                                        },
+                                        "ts": {
+                                          "type": "integer"
+                                        },
+                                        "GPSSignalStrength": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "heading",
+                                        "latitude",
+                                        "accuracyPercent",
+                                        "speed",
+                                        "satelliteLatchCount",
+                                        "longitude",
+                                        "ts",
+                                        "GPSSignalStrength"
+                                      ]
+                                    },
+                                    "startTimestamp": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "startLocation",
+                                    "distanceInMetres",
+                                    "endTimestamp",
+                                    "endLocation",
+                                    "startTimestamp"
+                                  ]
+                                }
+                              ]
+                            },
+                            "isTripRegerated": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "summary",
+                            "fcevUtilization",
+                            "lastTripRegenTimestamp",
+                            "canAvgSpeed",
+                            "tripRegenCount",
+                            "h2iceUtilization",
+                            "tripEfficiencyEnergyConsumed",
+                            "fcevDistanceTraveled",
+                            "fcevEfficiency",
+                            "h2iceDistanceTravel",
+                            "tripType",
+                            "h2iceTotalFuelConsumed",
+                            "fcevTotalH2ConsumedInKG",
+                            "h2iceEfficiency",
+                            "id",
+                            "pdId",
+                            "canMaxSpeed",
+                            "moving",
+                            "isTripRegerated"
+                          ]
+                        }
+                      ]
+                    },
+                    "pdId": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "tripAnalysis",
+                    "pdId"
+                  ]
+                }
+              ]
+            },
+            "tripAnalysisSummary": {
+              "type": "object",
+              "properties": {
+                "totalTrips": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "totalTrips"
+              ]
+            }
+          },
+          "required": [
+            "tripAnalysisDetails",
+            "tripAnalysisSummary"
+          ]
+        }
+      ]
+    },
+    "page": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "size": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "number",
+        "total",
+        "size"
+      ]
+    }
+  },
+  "required": [
+    "elements",
+    "page"
+  ]
+}

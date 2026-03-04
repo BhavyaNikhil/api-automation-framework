@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "userType",
+    "dateUpdated",
+    "dateCreated",
+    "userId",
+    "userName",
+    "firstName",
+    "lastName",
+    "mobileNo",
+    "tenant",
+    "site"
+  ],
+  "properties": {
+    "ownerType": { "type": "string" },
+    "lastName": { "type": "string" },
+    "firstLogin": { "type": "boolean" },
+    "mobileNo": { "type": "string" },
+    "userName": { "type": "string" },
+    "userId": { "type": "integer" },
+    "dateUpdated": { "type": "integer" },
+    "firstName": { "type": "string" },
+
+    "site": {
+      "type": "object",
+      "required": ["default", "tenantId", "name", "siteId"],
+      "properties": {
+        "default": { "type": "boolean" },
+        "tenantId": { "type": "integer" },
+        "name": { "type": "string" },
+        "siteId": { "type": "integer" }
+      }
+    },
+
+    "idam": { "type": "boolean" },
+    "userType": { "type": "string" },
+
+    "tenant": {
+      "type": "object",
+      "required": [
+        "dtcTabMandatory",
+        "supportedDeviceType",
+        "printOptionMandatory",
+        "tenantId",
+        "name",
+        "userReportTabMandatory",
+        "checkDeviceMandatory",
+        "userDeviceStatusMandatory",
+        "customer"
+      ],
+      "properties": {
+        "dtcTabMandatory": { "type": "boolean" },
+        "supportedDeviceType": { "type": "string" },
+        "printOptionMandatory": { "type": "boolean" },
+        "tenantId": { "type": "integer" },
+        "name": { "type": "string" },
+        "userReportTabMandatory": { "type": "boolean" },
+        "checkDeviceMandatory": { "type": "boolean" },
+        "userDeviceStatusMandatory": { "type": "boolean" },
+        "customer": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="API Automation Suite for JAP B2B SIT" parallel="tests" thread-count="1">
+
+    <test name="Get User Details By Name API Tests">
+        <classes>
+            <class name="tests.GetUserDetailsByNameTests"/>
+        </classes>
+    </test>
+
+    <test name="Get Vehicle System Status API Tests">
+        <classes>
+            <class name="tests.GetVehicleSystemStatusTests"/>
+        </classes>
+    </test>
+
+    <test name="Get User Devices API Tests">
+        <classes>
+            <class name="tests.GetUserDevicesTests"/>
+        </classes>
+    </test>
+
+    <test name="Get User Devices by PDID API Tests">
+        <classes>
+            <class name="tests.GetUserDevicesbyPDIDTests"/>
+        </classes>
+    </test>
+
+    <test name="Get Trip Report by Username API Tests">
+        <classes>
+            <class name="tests.GetTripReportbyUsernameTests"/>
+        </classes>
+    </test>
+
+    <test name="Post Whitelist and Add Car API Tests">
+        <classes>
+            <class name="tests.PostWhitelistandAddCarTests"/>
+        </classes>
+    </test>
+
+</suite>

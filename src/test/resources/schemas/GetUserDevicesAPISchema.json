@@ -1,0 +1,1766 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "object",
+          "properties": {
+            "vehicle": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "firmwareVersion": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "firmwareVersion",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "string"
+                    },
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "vin": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "imsi": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "imsi",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "vin",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "firmwareVersion": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "firmwareVersion",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "imageDetails": {
+                      "type": "object",
+                      "properties": {
+                        "imageId": {
+                          "type": "string"
+                        },
+                        "imageThumbNailId": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "imageId",
+                        "imageThumbNailId"
+                      ]
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "imageDetails",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "lastAccessDate",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "string"
+                    },
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "vin": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "imsi": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "imsi",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "vin",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "milStatus",
+                            "deviceType",
+                            "ignitionStatus",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "authId",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "string"
+                    },
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "vin": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "imsi": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "imsi",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "vin",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "string"
+                    },
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "vin": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "imsi": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "deviceType",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "imsi",
+                            "authId",
+                            "milStatus",
+                            "ignitionStatus",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "vin",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "integer"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "deviceType": {
+                              "type": "string"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "vehicleType": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "milStatus",
+                            "deviceType",
+                            "ignitionStatus",
+                            "dongleState",
+                            "geofenceBreach",
+                            "idle",
+                            "clientmqttuser",
+                            "imei",
+                            "pdid",
+                            "clientmqttpass",
+                            "authId",
+                            "vehicleType"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "configData",
+                    "year",
+                    "userId",
+                    "deviceHostTag",
+                    "dateUpdated",
+                    "dateCreated",
+                    "fuelType",
+                    "name",
+                    "tenantId",
+                    "deviceHostId",
+                    "model",
+                    "make",
+                    "device"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "vehicle"
+          ]
+        }
+      },
+      "required": [
+        "devices"
+      ]
+    },
+    "responseStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "serverTime": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "serverTime",
+        "message"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "responseStatus"
+  ]
+}

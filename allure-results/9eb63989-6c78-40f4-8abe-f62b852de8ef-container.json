@@ -1,0 +1,1 @@
+{"uuid":"9eb63989-6c78-40f4-8abe-f62b852de8ef","name":"tests.GetVehicleSystemStatusTests","children":["fe61121c-82c3-482d-aed9-624497243ed1"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1771846141728,"stop":1771846141728}],"afters":[],"start":1771846141727,"stop":1771846142055}
