@@ -371,4 +371,7 @@ execute TestNG tests, and publish JUnit reports. This allows automated test exec
 Integrated Allure reporting with TestNG and Jenkins, attached API request/response payloads,
 configured environment metadata, enabled execution history trends, and automated report publishing in CI pipeline
 
+After making changes, type as below in cmd to push to git so that jenkins can take the same
+git commit -am "message"
+git push
  */
