@@ -1,6 +1,7 @@
 package config;
 
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -18,6 +19,7 @@ public class ConfigManager {
             properties = new Properties();
             properties.load(fis);
             System.out.println("Loaded Environment: "+env);
+
         } catch (IOException e) {
             throw new RuntimeException("Failed to load config file");
         }

@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.AllureUtil;
 import utils.ResponseValidatorUtil;
 import utils.RetryUtil;
 import utils.SchemaValidatorUtil;

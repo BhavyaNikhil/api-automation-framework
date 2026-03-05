@@ -2,6 +2,10 @@
 
 <suite name="API Automation Suite for JAP B2B SIT" parallel="tests" thread-count="1">
 
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
     <test name="Get User Details By Name API Tests">
         <classes>
             <class name="tests.GetUserDetailsByNameTests"/>

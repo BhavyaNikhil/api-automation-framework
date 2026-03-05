@@ -8,6 +8,11 @@ import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
 public class BaseTest {
@@ -22,6 +27,17 @@ public class BaseTest {
             throw new RuntimeException("Environment is not healthy");
         }
     }*/
+
+    @BeforeSuite
+    public void setEnvironment() throws Exception {
+
+        String env = ConfigManager.getProperty(baseURI);
+
+        FileWriter writer = new FileWriter("allure-results/environment.properties");
+        writer.write("Environment=SIT\n");
+        writer.write("BaseURL=" + env + "\n");
+        writer.close();
+    }
 
     @BeforeClass
     public void setup(){
@@ -239,5 +255,120 @@ How did you integrate automation with CI/CD?
 The framework is integrated with Jenkins using a declarative pipeline.
 Environment parameters are passed dynamically using Maven system properties.
 TestNG reports are published post execution, enabling automated regression and smoke execution on every commit.
+
+✅ CI/CD Integration – Step by Step (What We Did)
+🔹 1️⃣ Push Automation Project to GitHub
+Step 1 – Initialize Git in project
+Inside project folder >> cmd terminal:
+git init
+git add .
+git commit -m "Initial commit"
+Step 2 – Rename branch to main
+git branch -M main
+Step 3 – Connect to GitHub repository
+git remote add origin https://github.com/BhavyaNikhil/api-automation-framework.git
+Step 4 – Push code to GitHub
+git push -u origin main
+Now code is stored in GitHub.
+
+🔹 2️⃣ Setup Jenkins Locally
+Step 1 – Download Jenkins.war
+Step 2 – Run Jenkins in cmd using:
+java -jar jenkins.war
+Open in browser:
+http://localhost:8080
+username: Bhavya
+password: Bhavya@123
+
+🔹 3️⃣ Install Required Plugins in Jenkins
+Go to:
+Manage Jenkins → Manage Plugins
+Installed:
+Git plugin
+Pipeline plugin
+Maven Integration
+JUnit plugin
+
+🔹 4️⃣ Configure Maven in Jenkins
+Go to:
+Manage Jenkins → Global Tool Configuration
+Under Maven:
+Click Add Maven
+Name: Maven-3.9.12
+Select Install automatically
+Save
+
+⚠ Tool name must match pipeline script exactly.
+
+🔹 5️⃣ Create Jenkins Pipeline Job
+Go to Jenkins Home:
+Click New Item
+Name: API-Automation
+Select Pipeline
+Click OK
+
+🔹 6️⃣ Add Pipeline Script
+Inside job → Configure → Pipeline → Pipeline Script:
+pipeline {
+    agent any
+    tools {
+        maven 'Maven-3.9.12'
+    }
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.com/BhavyaNikhil/api-automation-framework.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                bat 'mvn clean install -DskipTests'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+    }
+    post {
+        always {
+            junit allowEmptyResults: true,
+            testResults: '/target/surefire-reports/*.xml' -- put ** infront
+            allure([
+            includeProperties: false,
+            jdk: '',
+            results: [[path: 'target/allure-results']]
+        ])
+        }
+    }
+}
+
+Save.
+
+🔹 7️⃣ Run the Pipeline
+Click:
+Build Now
+Check:
+Console Output
+
+🔹 8️⃣ What Happens Internally (CI Flow)
+Jenkins pulls code from GitHub
+Maven builds project
+TestNG runs automation tests
+Surefire generates test reports
+Jenkins publishes JUnit report
+
+🔹 Final CI/CD Flow
+
+Developer pushes code → GitHub stores code → Jenkins pulls code → Build + Test executed automatically → Reports generated -> Allure Report
+
+Integrated my API automation framework with Jenkins CI.
+Pushed my framework to GitHub, configured Maven in Jenkins, created a pipeline job to checkout code, build using Maven,
+execute TestNG tests, and publish JUnit reports. This allows automated test execution on every build."
+
+Integrated Allure reporting with TestNG and Jenkins, attached API request/response payloads,
+configured environment metadata, enabled execution history trends, and automated report publishing in CI pipeline
 
  */
