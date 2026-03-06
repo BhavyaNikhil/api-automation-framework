@@ -3,6 +3,7 @@ package api;
 import config.ConfigManager;
 import config.Endpoints;
 import io.restassured.response.Response;
+import utils.RequestSpecBuilderUtil;
 
 import static io.restassured.RestAssured.given;
 
@@ -10,6 +11,7 @@ public class GetAccessTokenAPI {
     public static Response getAccessToken() {
 
         return given()
+                .spec(RequestSpecBuilderUtil.getRequestSpec())
                 .contentType("application/x-www-form-urlencoded")
                 .formParam("username", ConfigManager.getProperty("username"))
                 .formParam("password", ConfigManager.getProperty("password"))
