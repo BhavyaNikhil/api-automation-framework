@@ -9,13 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RequestSpecBuilderUtil {
-    private static RequestSpecification requestSpec;
     public static RequestSpecification getRequestSpec(){
-//        requestSpec = new RequestSpecBuilder().setContentType(ContentType.JSON)
-//                .addHeader("Authorization", "Bearer " + TokenManager.getToken())
-//                .build();
-//        return requestSpec;
-
         RequestSpecBuilder builder = new RequestSpecBuilder();
         Map<String, String> headers = new HashMap<>();
         headers.put("Authorization","Bearer " + TokenManager.getToken());

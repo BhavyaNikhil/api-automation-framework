@@ -5,6 +5,9 @@ import api.GetUserDevicesbyPDIDAPI;
 import base.BaseTest;
 import config.ConfigManager;
 import config.Endpoints;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,6 +18,9 @@ import utils.RetryUtil;
 import utils.SchemaValidatorUtil;
 
 public class GetUserDevicesbyPDIDTests extends BaseTest {
+    @Feature("User Devices by PDID API")
+    @Story("Get User Devices by PDID API")
+    @Description("Verify user devices are displayed based on pdid")
     @Test
     public void verifyGetUserDevicesbyPDIDContract() {
 

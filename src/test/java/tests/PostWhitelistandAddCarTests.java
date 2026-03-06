@@ -4,6 +4,9 @@ import api.GetTripReportbyUsernameAPI;
 import api.PostWhitelistandAddCarAPI;
 import base.BaseTest;
 import config.ConfigManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,6 +21,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PostWhitelistandAddCarTests extends BaseTest {
+    @Feature("Whitelist and Add Car API")
+    @Story("Post Whitelist and Add Car API")
+    @Description("Verify whitelist and add car")
     @Test
     public void verifyWhitelistandAddCar() {
         Map<String, Object> device = new HashMap<>();

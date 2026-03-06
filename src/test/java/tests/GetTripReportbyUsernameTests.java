@@ -4,6 +4,9 @@ import api.GetTripReportbyUsernameAPI;
 import api.GetUserDetailsByNameAPI;
 import base.BaseTest;
 import config.ConfigManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -17,9 +20,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.hamcrest.Matchers.lessThan;
-
 public class GetTripReportbyUsernameTests extends BaseTest {
+    @Feature("Trip Report by Username API")
+    @Story("Get Trip Report by Username API")
+    @Description("Verify trip reports are displayed based on username")
     @Test
     public void verifyTripReportbyUsername() {
 

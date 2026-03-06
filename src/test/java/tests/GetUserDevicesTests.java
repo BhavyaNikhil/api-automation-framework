@@ -5,6 +5,9 @@ import api.GetVehicleSystemStatusAPI;
 import base.BaseTest;
 import config.ConfigManager;
 import config.Endpoints;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,6 +18,9 @@ import utils.RetryUtil;
 import utils.SchemaValidatorUtil;
 
 public class GetUserDevicesTests extends BaseTest {
+    @Feature("User Devices by Username API")
+    @Story("Get User Devices by Username API")
+    @Description("Verify user devices are displayed based on username")
     @Test
     public void verifyGetUserDevicesContract() {
 

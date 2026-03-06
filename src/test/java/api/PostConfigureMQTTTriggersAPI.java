@@ -3,6 +3,7 @@ package api;
 import config.Endpoints;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import utils.AllureUtil;
 import utils.RequestSpecBuilderUtil;
 import utils.TokenManager;
 
@@ -10,7 +11,10 @@ import static io.restassured.RestAssured.given;
 
 public class PostConfigureMQTTTriggersAPI {
     public static Response postConfigureMQTTTriggers(String pdid, Object requestBody) {
-        return given()
+        //Attach request to Allure
+        AllureUtil.attachRequest(requestBody.toString());
+
+        Response response = given()
                 .spec(RequestSpecBuilderUtil.getRequestSpec())
                 .pathParam("pdid", pdid)
                 .body(requestBody)
@@ -18,5 +22,8 @@ public class PostConfigureMQTTTriggersAPI {
                 .post(Endpoints.POST_CONFIGURE_MQTT_TRIGGERS)
                 .then()
                 .extract().response();
+        //Attach response to Allure
+        AllureUtil.attachResponse(response.asString());
+        return response;
     }
 }
