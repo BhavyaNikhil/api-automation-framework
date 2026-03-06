@@ -11,7 +11,6 @@ public class GetAccessTokenAPI {
     public static Response getAccessToken() {
 
         return given()
-                .spec(RequestSpecBuilderUtil.getRequestSpec())
                 .contentType("application/x-www-form-urlencoded")
                 .formParam("username", ConfigManager.getProperty("username"))
                 .formParam("password", ConfigManager.getProperty("password"))

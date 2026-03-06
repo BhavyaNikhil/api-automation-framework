@@ -31,7 +31,7 @@ public class BaseTest {
     @BeforeSuite
     public void setEnvironment() throws Exception {
 
-        String env = ConfigManager.getProperty(baseURI);
+        String env = ConfigManager.getProperty("base.url");
 
         FileWriter writer = new FileWriter("allure-results/environment.properties");
         writer.write("Environment=SIT\n");
@@ -42,7 +42,6 @@ public class BaseTest {
     @BeforeClass
     public void setup(){
         RestAssured.baseURI= ConfigManager.getProperty("base.url");
-        RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter()); //instead of putting log().all() everywhere
     }
 }
 
