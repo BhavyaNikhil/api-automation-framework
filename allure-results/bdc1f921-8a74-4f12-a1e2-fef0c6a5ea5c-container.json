@@ -1,0 +1,1 @@
+{"uuid":"bdc1f921-8a74-4f12-a1e2-fef0c6a5ea5c","name":"tests.GetUserDevicesbyPDIDTests","children":["0055ab8d-5d45-4c89-a5c2-85e95e017caa"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1773140188779,"stop":1773140188780}],"afters":[],"start":1773140188779,"stop":1773140189148}

@@ -1,0 +1,1 @@
+{"uuid":"6fd7aeaa-203d-4620-b83a-a97781c078c1","name":"API Automation Suite for JAP B2B SIT","children":["3ed212f4-f3a1-4c68-88d5-2bf76a450d75"],"befores":[{"name":"setEnvironment","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1773204653128,"stop":1773204653137}],"afters":[],"start":1773204653105,"stop":1773204807413}

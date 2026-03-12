@@ -34,7 +34,7 @@
                     },
                     "deviceHostTag": {
                       "type": "string"
-                    },
+                      },
                     "fuelType": {
                       "type": "string"
                     },

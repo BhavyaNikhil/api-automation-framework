@@ -24,7 +24,7 @@ public class GetUserDevicesbyPDIDTests extends BaseTest {
     @Test
     public void verifyGetUserDevicesbyPDIDContract() {
 
-        String userID = ConfigManager.getProperty("username");
+        String userID = ConfigManager.getProperty("username_jhs");
         String pdId = ConfigManager.getProperty("pdid");
 
         Response response = RetryUtil.executeWithRetry(() ->

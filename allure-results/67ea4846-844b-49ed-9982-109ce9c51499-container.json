@@ -1,0 +1,1 @@
+{"uuid":"67ea4846-844b-49ed-9982-109ce9c51499","name":"tests.PostWhitelistandAddCarTests","children":["48de7311-d072-4c80-a505-be04d0d24977"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1773201329504,"stop":1773201329504}],"afters":[],"start":1773201329503,"stop":1773201330083}

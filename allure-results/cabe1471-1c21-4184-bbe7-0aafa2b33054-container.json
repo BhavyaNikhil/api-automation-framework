@@ -1,0 +1,1 @@
+{"uuid":"cabe1471-1c21-4184-bbe7-0aafa2b33054","name":"tests.GetUserDetailsByNameTests","children":["994b9b50-b9e0-4207-8455-c9bdcdb4df87"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1773140188308,"stop":1773140188308}],"afters":[],"start":1773140188307,"stop":1773140188769}

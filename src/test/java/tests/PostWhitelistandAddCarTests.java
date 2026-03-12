@@ -4,17 +4,16 @@ import api.GetTripReportbyUsernameAPI;
 import api.PostWhitelistandAddCarAPI;
 import base.BaseTest;
 import config.ConfigManager;
+import factories.WhitelistAddCarRequestFactory;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.response.Response;
+import models.WhitelistAddCarRequest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import utils.AllureUtil;
-import utils.ResponseValidatorUtil;
-import utils.RetryUtil;
-import utils.SchemaValidatorUtil;
+import utils.*;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -24,38 +23,9 @@ public class PostWhitelistandAddCarTests extends BaseTest {
     @Feature("Whitelist and Add Car API")
     @Story("Post Whitelist and Add Car API")
     @Description("Verify whitelist and add car")
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void verifyWhitelistandAddCar() {
-        Map<String, Object> device = new HashMap<>();
-        device.put("imei",ConfigManager.getProperty("imei"));
-        device.put("imsi",ConfigManager.getProperty("imei"));
-        device.put("msisdn",ConfigManager.getProperty("imei"));
-        device.put("iccid",ConfigManager.getProperty("imei")+Integer.parseInt("10000"));
-
-        Map<String, Object> plan = new HashMap<>();
-        plan.put("code","499");
-        plan.put("name","Jio");
-        plan.put("description","Jio Data Call");
-
-        Map<String, Object> vehicle = new HashMap<>();
-        vehicle.put("make",ConfigManager.getProperty("make"));
-        vehicle.put("model",ConfigManager.getProperty("model"));
-        vehicle.put("year",ConfigManager.getProperty("year"));
-        vehicle.put("registrationNumber",ConfigManager.getProperty("registrationNumber"));
-        vehicle.put("fuelType",ConfigManager.getProperty("fuelType"));
-
-        Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("adminEmail",
-                ConfigManager.getProperty("username"));
-        requestBody.put("bpid",
-                ConfigManager.getProperty("imei"));
-        requestBody.put("category", "EnterpriseConnectedVehicles");
-        requestBody.put("device",device);
-        requestBody.put("plan",plan);
-        requestBody.put("vehicle",vehicle);
-        requestBody.put("serviceStatus","active");
-        requestBody.put("vehicleType","FOUR_WHEELER_HEV");
-
+        WhitelistAddCarRequest requestBody = WhitelistAddCarRequestFactory.defaultRequest();
         Response response = RetryUtil.executeWithRetry(() ->
                 PostWhitelistandAddCarAPI.postWhitelistandAddCar(requestBody),3);
 

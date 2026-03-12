@@ -370,7 +370,90 @@ execute TestNG tests, and publish JUnit reports. This allows automated test exec
 Integrated Allure reporting with TestNG and Jenkins, attached API request/response payloads,
 configured environment metadata, enabled execution history trends, and automated report publishing in CI pipeline
 
+2️⃣ Test Data Management using DataProvider
+
+Right now your tests run only one dataset.
+
+Production frameworks run multiple datasets automatically.
+
+Example:
+
+page = 1
+page = 2
+page = 3
+invalid page
+Create
+utils → TestDataProvider.java
+import org.testng.annotations.DataProvider;
+
+public class TestDataProvider {
+
+    @DataProvider(name="tripReportData")
+    public static Object[][] tripReportData(){
+
+        return new Object[][]{
+
+                {1,10},
+                {2,10},
+                {3,10}
+
+        };
+    }
+}
+Use in Test
+@Test(dataProvider="tripReportData", dataProviderClass = TestDataProvider.class)
+public void verifyTripReportbyUsername(int page,int size)
+
+Then
+
+.setPage(page)
+.setSize(size)
+Interview Answer
+
+We implemented TestNG DataProvider to run tests with multiple datasets, improving test coverage without duplicating test cases.
+
+I developed an API automation framework using RestAssured, TestNG, and Maven.
+The framework follows layered architecture with API layer, test layer, utility layer, and configuration layer.
+It supports schema validation, retry mechanisms, token management, environment configuration, and
+centralized request specifications.
+I also integrated Allure reporting and Jenkins CI/CD pipeline for automated test execution and reporting.
+
 After making changes, type as below in cmd to push to git so that jenkins can take the same
 git commit -am "message"
 git push
+
+to check for errors -> mvn clean test
+to run code in terminal - cmd -> mvn clean test -Denv=sit
+
+The best implementation (so you never keep editing POJOs again) is to use
+Project Lombok + Builder + Jackson annotations.
+This is how most modern automation frameworks are written because it
+eliminates getters/setters/constructors completely.
+You will write very small model classes and Jackson will serialize them perfectly.
+
+1. Add Lombok Dependency
+2. Enable Annotation Processing - In Intellij, File >> Settings >> Build, Execution, Deployment >> Compiler >>
+Annotation Processors >> Enable Annotation Processing
+3. Add Model Classes
+4. Add Factory Class
+5. Add API Class
+6. Add Test Class
+
+Final Framework:
+src/test/java
+    api
+    models
+    factories
+    tests
+    utils
+
+Final Steps:
+1. Add Model Classes required only when request body is present
+2. Add Factory Class required only when request body is present
+3. Add API Class
+4. Add Test Class
+5. Add endpoint in Endpoints.java
+6. Create schema in resources/schemas
+7. Add entry in testng.xml
+
  */

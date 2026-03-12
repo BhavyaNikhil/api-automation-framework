@@ -6,9 +6,21 @@
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
 
+    <test name="Get Trip Report by Username API Tests">
+        <classes>
+            <class name="tests.GetTripReportbyUsernameTests"/>
+        </classes>
+    </test>
+
     <test name="Get User Details By Name API Tests">
         <classes>
             <class name="tests.GetUserDetailsByNameTests"/>
+        </classes>
+    </test>
+
+    <test name="Get User Devices by PDID API Tests">
+        <classes>
+            <class name="tests.GetUserDevicesbyPDIDTests"/>
         </classes>
     </test>
 
@@ -24,15 +36,9 @@
         </classes>
     </test>
 
-    <test name="Get User Devices by PDID API Tests">
+    <test name="Hard Delete Device API Tests">
         <classes>
-            <class name="tests.GetUserDevicesbyPDIDTests"/>
-        </classes>
-    </test>
-
-    <test name="Get Trip Report by Username API Tests">
-        <classes>
-            <class name="tests.GetTripReportbyUsernameTests"/>
+            <class name="tests.HardDeleteDeviceTests"/>
         </classes>
     </test>
 

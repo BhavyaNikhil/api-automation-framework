@@ -1,0 +1,1 @@
+{"uuid":"83dab5b2-de10-4da2-81db-bd5211fe1e9f","name":"tests.GetTripReportbyUsernameTests","children":["c37bf1db-415d-4ea4-b3bc-00c12e6f9a0e"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1773201322986,"stop":1773201323441}],"afters":[],"start":1773201322966,"stop":1773201327033}

@@ -6,24 +6,19 @@ import io.restassured.response.Response;
 import utils.AllureUtil;
 import utils.RequestSpecBuilderUtil;
 import utils.TokenManager;
+import utils.TokenType;
 
 import static io.restassured.RestAssured.given;
 
 public class PostConfigureMQTTTriggersAPI {
     public static Response postConfigureMQTTTriggers(String pdid, Object requestBody) {
-        //Attach request to Allure
-        AllureUtil.attachRequest(requestBody.toString());
-
-        Response response = given()
-                .spec(RequestSpecBuilderUtil.getRequestSpec())
+        return given()
+                .spec(RequestSpecBuilderUtil.getRequestSpec(TokenType.JHSTENANTADMIN))
                 .pathParam("pdid", pdid)
                 .body(requestBody)
                 .when()
                 .post(Endpoints.POST_CONFIGURE_MQTT_TRIGGERS)
                 .then()
                 .extract().response();
-        //Attach response to Allure
-        AllureUtil.attachResponse(response.asString());
-        return response;
     }
 }

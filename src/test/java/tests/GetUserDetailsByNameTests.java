@@ -24,7 +24,7 @@ public class GetUserDetailsByNameTests extends BaseTest {
     @Test
     public void verifyUserDetailsContract() {
 
-        String username = ConfigManager.getProperty("username");
+        String username = ConfigManager.getProperty("username_jhs");
 
         Response response = RetryUtil.executeWithRetry(() ->
                 GetUserDetailsByNameAPI.getUserByName(username),3);

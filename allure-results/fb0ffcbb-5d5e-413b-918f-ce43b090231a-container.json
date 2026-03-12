@@ -1,0 +1,1 @@
+{"uuid":"fb0ffcbb-5d5e-413b-918f-ce43b090231a","name":"tests.HardDeleteDeviceTests","children":["d74fe735-bdc0-461c-b215-41b554d80638"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1773219458658,"stop":1773219459218}],"afters":[],"start":1773219458632,"stop":1773219463811}

@@ -24,7 +24,7 @@ public class GetUserDevicesTests extends BaseTest {
     @Test
     public void verifyGetUserDevicesContract() {
 
-        String userID = ConfigManager.getProperty("username");
+        String userID = ConfigManager.getProperty("username_jhs");
 
         Response response = RetryUtil.executeWithRetry(() ->
                 GetUserDevicesAPI.getUserDevices(userID),3);
