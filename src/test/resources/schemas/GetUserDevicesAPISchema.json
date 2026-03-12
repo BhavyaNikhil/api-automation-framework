@@ -1,44 +1,170 @@
 {
-  "data": {
-    "devices": {
-      "vehicle": [
-        {
-          "userId": "userofadmin@gmail.com",
-          "make": "sdfssf",
-          "color": "",
-          "deviceHostId": "46458ade-4076-473c-9d74-8d7271d8206a",
-          "name": "211110011111006",
-          "model": "sdss",
-          "year": "2017",
-          "deviceHostTag": "SDSS",
-          "fuelType": "PETROL",
-          "dateCreated": 1495108844047,
-          "dateUpdated": 1495108844047,
-          "configData": {
-            "dailyReportEnabled": false
-          },
-          "device": [
-            {
-              "pdid": "86a2c833339b442ba4b0090ee8af7942",
-              "imei": "211110011111006",
-              "authId": "41111",
-              "clientmqttuser": "918c9070-8242-4229-a56c-cf5066b76857",
-              "clientmqttpass": "b69f68d6a5aa8783ab7ba72a20595b91",
-              "milStatus": false,
-              "geofenceBreach": false,
-              "ignitionStatus": false,
-              "idle": false,
-              "dongleState": "Connected",
-              "lastAccessDate": 1572859200010
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "object",
+          "properties": {
+            "vehicle": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "userId": {
+                      "type": "string"
+                    },
+                    "make": {
+                      "type": "string"
+                    },
+                    "color": {
+                      "type": "string"
+                    },
+                    "deviceHostId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "deviceHostTag": {
+                      "type": "string"
+                    },
+                    "fuelType": {
+                      "type": "string"
+                    },
+                    "dateCreated": {
+                      "type": "integer"
+                    },
+                    "dateUpdated": {
+                      "type": "integer"
+                    },
+                    "configData": {
+                      "type": "object",
+                      "properties": {
+                        "dailyReportEnabled": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "dailyReportEnabled"
+                      ]
+                    },
+                    "device": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "pdid": {
+                              "type": "string"
+                            },
+                            "imei": {
+                              "type": "string"
+                            },
+                            "authId": {
+                              "type": "string"
+                            },
+                            "clientmqttuser": {
+                              "type": "string"
+                            },
+                            "clientmqttpass": {
+                              "type": "string"
+                            },
+                            "milStatus": {
+                              "type": "boolean"
+                            },
+                            "geofenceBreach": {
+                              "type": "boolean"
+                            },
+                            "ignitionStatus": {
+                              "type": "boolean"
+                            },
+                            "idle": {
+                              "type": "boolean"
+                            },
+                            "dongleState": {
+                              "type": "string"
+                            },
+                            "lastAccessDate": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "pdid",
+                            "imei",
+                            "authId",
+                            "clientmqttuser",
+                            "clientmqttpass",
+                            "milStatus",
+                            "geofenceBreach",
+                            "ignitionStatus",
+                            "idle",
+                            "dongleState",
+                            "lastAccessDate"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "userId",
+                    "make",
+                    "color",
+                    "deviceHostId",
+                    "name",
+                    "model",
+                    "year",
+                    "deviceHostTag",
+                    "fuelType",
+                    "dateCreated",
+                    "dateUpdated",
+                    "configData",
+                    "device"
+                  ]
+                }
+              ]
             }
+          },
+          "required": [
+            "vehicle"
           ]
         }
+      },
+      "required": [
+        "devices"
+      ]
+    },
+    "responseStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "serverTime": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "serverTime"
       ]
     }
   },
-  "responseStatus": {
-    "code": 200,
-    "message": "Successfully done",
-    "serverTime": 1503376896660
-  }
+  "required": [
+    "data",
+    "responseStatus"
+  ]
 }

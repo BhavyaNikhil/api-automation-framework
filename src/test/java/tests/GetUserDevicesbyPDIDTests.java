@@ -12,10 +12,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import utils.AllureUtil;
-import utils.ResponseValidatorUtil;
-import utils.RetryUtil;
-import utils.SchemaValidatorUtil;
+import utils.*;
 
 public class GetUserDevicesbyPDIDTests extends BaseTest {
     @Feature("User Devices by PDID API")
@@ -25,7 +22,7 @@ public class GetUserDevicesbyPDIDTests extends BaseTest {
     public void verifyGetUserDevicesbyPDIDContract() {
 
         String userID = ConfigManager.getProperty("username_jhs");
-        String pdId = ConfigManager.getProperty("pdid");
+        String pdId = TestContext.get("PD_ID");
 
         Response response = RetryUtil.executeWithRetry(() ->
                 GetUserDevicesbyPDIDAPI.getUserDevicesbyPDID(userID,pdId),3);

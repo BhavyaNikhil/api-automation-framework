@@ -29,7 +29,11 @@ public class PostWhitelistandAddCarTests extends BaseTest {
         Response response = RetryUtil.executeWithRetry(() ->
                 PostWhitelistandAddCarAPI.postWhitelistandAddCar(requestBody),3);
 
+        ResponseUtil.store(response,"pdId", "PD_ID"); //store from response to use in next request
+
         //Standard and Schema Validations
         ResponseValidatorUtil.validateStandardResponse(response,200,"schemas/PostWhitelistandAddCarAPISchema.json");
     }
 }
+
+// "data.devices.vehicle[0].deviceHostId"

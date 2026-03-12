@@ -18,12 +18,6 @@
         </classes>
     </test>
 
-    <test name="Get User Devices by PDID API Tests">
-        <classes>
-            <class name="tests.GetUserDevicesbyPDIDTests"/>
-        </classes>
-    </test>
-
     <test name="Get Vehicle System Status API Tests">
         <classes>
             <class name="tests.GetVehicleSystemStatusTests"/>
@@ -45,6 +39,12 @@
     <test name="Post Whitelist and Add Car API Tests">
         <classes>
             <class name="tests.PostWhitelistandAddCarTests"/>
+        </classes>
+    </test>
+
+    <test name="Get User Devices by PDID API Tests">
+        <classes>
+            <class name="tests.GetUserDevicesbyPDIDTests"/>
         </classes>
     </test>
 
